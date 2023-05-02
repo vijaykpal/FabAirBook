@@ -13,8 +13,8 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="FlightsList" component={FlightsList} />
-        <Stack.Screen name="FlightDetails" component={FlightDetails} />
+        <Stack.Screen name="FlightsList" component={FlightsList} options={{ title: 'Flight List' }} />
+        <Stack.Screen name="FlightDetails" component={FlightDetails} options={{ title: 'Flight Details' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

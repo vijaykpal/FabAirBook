@@ -228,7 +228,8 @@ const styles = StyleSheet.create({
     },
     noteTxt:{
         padding: 0,
-        fontSize: 16
+        fontSize: 16,
+        maxHeight: 86
     },
     imortantSubTitle:{
         fontSize: 14,
