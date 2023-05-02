@@ -27,9 +27,14 @@ const FlightDetails = ({navigation, route}) => {
     const onContinuePress = async () => {
         try{
             const res = await fetch(BOOKING_SUCCESS_URL);
-            const {data} = await res.json();
-            if(data.tripId) setShowSuccessModal(true);
-            else setShowFailureModal(true);
+            if(res?.status === 200){
+                setShowSuccessModal(true);
+            }
+            else{
+                const {data} = await res.json();
+                if(data?.status === 200 || data.tripId) setShowSuccessModal(true);
+                else setShowFailureModal(true);
+            }
         }
         catch(err){
             setShowFailureModal(true);
